@@ -26,7 +26,7 @@ jobs:
           cd ..
       - name: make-formatter-ex 
         run: |
-          cd formatter_ex 
+          cd formatter_ex_lib 
           cmake . -DCMAKE_CXX_COMPILER=g++
           cmake --build .
           cd ..
