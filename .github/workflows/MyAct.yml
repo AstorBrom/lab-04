@@ -1,0 +1,46 @@
+name: My-Action
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-on-linux:
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        shell: bash
+        
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: make-compiler
+        run: sudo apt install g++ cmake
+          
+      - name: make-formatter-lib 
+        run: | 
+          cd formatter_lib 
+          cmake . -DCMAKE_CXX_COMPILER=g++
+          cmake --build .
+          cd ..
+      - name: make-formatter-ex 
+        run: |
+          cd formatter_ex 
+          cmake . -DCMAKE_CXX_COMPILER=g++
+          cmake --build .
+          cd ..
+          
+      - name: make-solv-app
+        run: |
+          cd solver_application 
+          cmake . -DCMAKE_CXX_COMPILER=g++
+          cmake --build .
+          cd ..
+          
+      - name: make-hello-eorld-app
+        run: |
+         cd hello_world_application 
+         cmake . -DCMAKE_CXX_COMPILER=g++
+         cmake --build .
+         cd ..
