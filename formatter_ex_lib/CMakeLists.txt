@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.4)
 project(form_ex)
 add_library(create_form_ex STATIC formatter_ex.cpp)
-include_directories(formatter_ex_lib)
-target_link_libraries(create_form_ex formatter)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib)
+target_link_libraries(create_form_ex ${CMAKE_CURRENT_SOURCE_DIR}/../formatter)
 target_include_directories(create_form_ex PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../formatter_lib)
