@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.4)
 project(create_solv)
-add_library(solv STATIC solver.cpp)
+add_library(solver STATIC solver.cpp)
 target_include_directories(solv PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib)
 add_executable(solver ${CMAKE_CURRENT_SOURCE_DIR}/../equation.cpp)
 target_include_directories(solver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib)
