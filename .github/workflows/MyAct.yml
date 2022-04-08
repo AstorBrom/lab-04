@@ -24,6 +24,12 @@ jobs:
           cmake . -DCMAKE_CXX_COMPILER=g++
           cmake --build .
           cd ..
+      - name: make-solver-lib 
+        run: |
+          cd solver_lib
+          cmake . -DCMAKE_CXX_COMPILER=g++
+          cmake --build .
+          cd ..
       - name: make-formatter-ex 
         run: |
           cd formatter_ex_lib 
@@ -38,7 +44,7 @@ jobs:
           cmake --build .
           cd ..
           
-      - name: make-hello-eorld-app
+      - name: make-hello-world-app
         run: |
          cd hello_world_application 
          cmake . -DCMAKE_CXX_COMPILER=g++
