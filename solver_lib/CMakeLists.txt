@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.4)
 project(solv)
-add_library(create_solv STATIC /home/velial/labs/lab_03/lab03/solver_lib/solver.cpp)
-include_directories(/home/velial/labs/lab_03/lab03/solver_lib)
-target_link_libraries(create_solv /home/velial/labs/lab_03/lab03/solver_lib/solver.h)
+add_library(create_solv STATIC ${CMAKE_CURRENT_SOURCE_DIR}/../solver.cpp)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib)
+target_link_libraries(create_solv ${CMAKE_CURRENT_SOURCE_DIR}/../solver.h)
