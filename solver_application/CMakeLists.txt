@@ -8,4 +8,4 @@ target_include_directories(solver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../formatte
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib create)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib create_)
 target_link_libraries(solver create_form_ex)
-target_link_libraries(solver create_solv)
+target_link_libraries(solver solv)
