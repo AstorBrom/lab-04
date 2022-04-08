@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.0)
 project(create_solv)
 #add_library(solv STATIC solver.cpp)
 #target_include_directories(solv PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib)
