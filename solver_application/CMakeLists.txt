@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.4)
 project(create_solv)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib)
+#include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib)
 target_link_libraries(solv ${CMAKE_CURRENT_SOURCE_DIR}/../solve.h)
 add_library(solv STATIC ${CMAKE_CURRENT_SOURCE_DIR}/../solver.cpp)
 add_executable(solver ${CMAKE_CURRENT_SOURCE_DIR}/../equation.cpp)
