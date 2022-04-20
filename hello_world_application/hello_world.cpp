@@ -1,8 +1,10 @@
 #include <iostream>
-
 #include "formatter_ex.h"
 
-int main()
+int main ()
 {
-    formatter(std::cout, "hello, world!");
+
+    std::cout << "hello world " << count5(1,2) << std::endl;
+
+    return 0;
 }
