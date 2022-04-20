@@ -11,6 +11,6 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib)
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib formatter_ex_lib)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib formatter_ex)
 
-target_link_libraries(${PROJECT_NAME} formatter_ex_lib)
+target_link_libraries(${PROJECT_NAME} formatter_ex)
