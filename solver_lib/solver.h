@@ -1,3 +1,6 @@
-#pragma once
+#ifndef SOLV_H
+#define SOLV_H
 
-void solve(float a, float b, float c, float& x1, float& x2);
+void print (int);
+
+#endif
