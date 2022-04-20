@@ -1,9 +1,23 @@
-#include "solver.h"
-#include "formatter_ex.h"
 #include <iostream>
 
-int main ()
+#include "formatter_ex.h"
+#include "solver.h"
+
+int main()
 {
-    print(count5(10, 10));
-    return 0;
-}
+    float a = 0;
+    float b = 0;
+    float c = 0;
+
+    std::cin >> a >> b >> c;
+
+    float x1 = 0;
+    float x2 = 0;
+
+    try
+    {
+        solve(a, b, c, x1, x2);
+
+        formatter(std::cout, "x1 = " + std::to_string(x1));
+        formatter(std::cout, "x2 = " + std::to_string(x2));
+    }
