@@ -13,6 +13,6 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/..
                                                    ${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex)   
                                                 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib solver)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex formatter_ex)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib formatter_ex)
 
 target_link_libraries(${PROJECT_NAME} formatter_ex solver)
