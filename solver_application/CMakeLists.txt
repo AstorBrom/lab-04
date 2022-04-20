@@ -1,11 +1,18 @@
-cmake_minimum_required(VERSION 3.0)
-project(create_solv)
-#add_library(solv STATIC solver.cpp)
-#target_include_directories(solv PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib)
-add_executable(solver equation.cpp)
-target_include_directories(solver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib)
-target_include_directories(solver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib create)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib create_)
-target_link_libraries(solver create_form_ex)
-target_link_libraries(solver solv)
+cmake_minimum_required(VERSION 3.4)
+
+project(solve_app)
+
+add_executable(${PROJECT_NAME} solve_app.cpp)
+
+set_target_properties(${PROJECT_NAME} PROPERTIES
+                        CMAKE_CXX_STANDARD 17
+                        CMAKE_CXX_STANDARD_REQUIRED ON
+                        CMAKE_BUILD_TYPE Release)
+
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib
+                                                   ${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib)   
+                                                
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib solver)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib formatter_ex_lib)
+
+target_link_libraries(${PROJECT_NAME} formatter_ex_lib solver)
