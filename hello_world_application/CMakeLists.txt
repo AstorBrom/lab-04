@@ -1,7 +1,16 @@
-cmake_minimum_required(VERSION 3.4)
-project(form_hello_world)
-add_executable(form_hello_wold hello_world.cpp)
-target_include_directories(form_hello_wold PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib)
-target_include_directories(form_hello_wold PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../formatter_lib)
-target_link_libraries(form_hello_wold ${CMAKE_CURRENT_SOURCE_DIR}/../libcreate_form_ex.a)
-target_link_libraries(form_hello_wold ${CMAKE_CURRENT_SOURCE_DIR}/../libcreate_form.a)
+cmake_minimum_required(VERSION 3.0)
+
+project(hello)
+
+add_executable(${PROJECT_NAME} hello_world.cpp)
+
+set_target_properties(${PROJECT_NAME} PROPERTIES
+                        CMAKE_CXX_STANDARD 17
+                        CMAKE_CXX_STANDARD_REQUIRED ON
+                        CMAKE_BUILD_TYPE Release)
+
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib)
+
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib formatter_ex_lib)
+
+target_link_libraries(${PROJECT_NAME} formatter_ex_lib)
