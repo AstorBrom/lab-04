@@ -21,3 +21,10 @@ int main()
         formatter(std::cout, "x1 = " + std::to_string(x1));
         formatter(std::cout, "x2 = " + std::to_string(x2));
     }
+    catch (const std::logic_error& ex)
+    {
+        formatter(std::cout, ex.what());
+    }
+
+    return 0;
+}
