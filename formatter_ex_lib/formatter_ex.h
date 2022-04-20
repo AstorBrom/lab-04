@@ -1,6 +1,6 @@
-#pragma once
+#ifndef FORM_EX_h
+#define FORM_EX_h
 
-#include <string>
-#include <iostream>
+int count5 (int a, int b);
 
-std::ostream& formatter(std::ostream& out, const std::string& message);
+#endif
