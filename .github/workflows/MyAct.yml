@@ -30,14 +30,14 @@ jobs:
           cmake . -DCMAKE_CXX_COMPILER=g++
           cmake --build .
           cd ..
-      - name: make-formatter-ex 
+      - name: make-formatter-ex-lib
         run: |
           cd formatter_ex_lib 
           cmake . -DCMAKE_CXX_COMPILER=g++
           cmake --build .
           cd ..
           
-      - name: make-solv-app
+      - name: make-solv-application
         run: |
           cd solver_application 
           cmake . -DCMAKE_CXX_COMPILER=g++
