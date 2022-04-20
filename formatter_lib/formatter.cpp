@@ -1,10 +1,6 @@
 #include "formatter.h"
 
-std::string formatter(const std::string& message)
+int count (int a, int b)
 {
-    std::string res;
-    res += "-------------------------\n";
-    res += message + "\n";
-    res += "-------------------------\n";
-    return res;
+    return a + b;
 }
