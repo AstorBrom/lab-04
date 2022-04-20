@@ -1,5 +1,6 @@
-#pragma once
+#ifndef FORM_H
+#define FORM_H
 
-#include <string>
+int count(int a, int b);
 
-std::string formatter(const std::string& message);
+#endif
